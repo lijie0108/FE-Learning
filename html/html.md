@@ -147,7 +147,7 @@ caption
 
 合并单元格
 colspan
-rowspan  
+rowspan
 
 表格划分结构
 thead
@@ -160,7 +160,7 @@ tfoot
 自定义列表
 
 ### 表单标签
-input
+input标签
 text
 password
 radio
@@ -174,8 +174,12 @@ file
 表单name属性
 表单checked属性
 
-HTML  16
+label标签
+textarea标签
+select 下拉列表标签
+selected属性
 
+HTML 20
 
 
 
