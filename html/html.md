@@ -126,10 +126,55 @@ UTF-8基本包含全世界所有国家需要用到的字符。
 HTML第二天目标
 表格，表单，列表
 
-HTML 02
+表格
+table
+th
+tr
+td
 
+表格属性
+border
+width
+height
+align
+cellspacing
+cellpadding
 
+表头单元格
+th
+表格标题
+caption
 
+合并单元格
+colspan
+rowspan  
+
+表格划分结构
+thead
+tbody
+tfoot
+
+### 列表标签
+无序列表
+有序列表
+自定义列表
+
+### 表单标签
+input
+text
+password
+radio
+checkbox
+button
+submit
+reset
+image
+file
+
+表单name属性
+表单checked属性
+
+HTML  16
 
 
 
