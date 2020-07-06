@@ -179,13 +179,23 @@ textarea标签
 select 下拉列表标签
 selected属性
 
-HTML 20
+form表单域
+action
+method
+name
+
+团队约定：
+元素的属性值使用双引号
+元素属性值可以写上都写上
 
 
+查文档
+W3C
+MDN
 
-
-
-
+表格
+列表
+表单
 
 
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你在我也在</title>
+</head>
+<body>
+    <table width="600" align="center" cellspacing="0" cellpadding="5">
+        <caption><h4>青春不常在，抓紧谈恋爱</h4></caption>
+        <tr>
+            <td>性别</td>
+            <td>
+                <input type="radio"> <img src="../images/man.jpg" alt="" name="male"> 男
+                <input type="radio"> <img src="../images/women.jpg" alt="" name="male"> 女
+            </td>
+        </tr>
+        <tr>
+            <td>生日</td>
+            <td>
+                <select name="" id="">
+                    <option value="">--请选择年--</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                </select>
+                <select name="" id="">
+                    <option value="">--请选择月--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <select name="" id="">
+                    <option value="">--请选择日--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>所在地区</td>
+            <td>
+                <input type="text" placeholder="请输入地区">
+            </td>
+        </tr>
+        <tr>
+            <td>婚姻状况</td>
+            <td>
+                <input type="radio" name="marry"> 未婚
+                <input type="radio" name="marry"> 离婚
+                <input type="radio" name="marry"> 丧偶
+            </td>
+        </tr>
+        <tr>
+            <td>学历</td>
+            <td>
+                <input type="text" placeholder="请输入学历">
+            </td>
+        </tr>
+        <tr>
+            <td>月薪</td>
+            <td>
+                <input type="text" placeholder="请输入月薪">
+            </td>
+        </tr>
+        <tr>
+            <td>手机号</td>
+            <td>
+                <input type="text" placeholder="请输入手机号">
+            </td>
+        </tr>
+        <tr>
+            <td>昵称</td>
+            <td>
+                <input type="text" placeholder="请输入昵称">
+            </td>
+        </tr>
+        <tr>
+            <td>喜欢的类型</td>
+            <td>
+                <input type="checkbox" name="love"> 妩媚的
+                <input type="checkbox" name="love"> 柔美
+                <input type="checkbox" name="love"> 可爱
+                <input type="checkbox" name="love"> 小鲜肉
+            </td>
+        </tr>
+        <tr>
+            <td>自我介绍</td>
+            <td>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="image" src="../images/btn.png"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="radio" name="agree" checked="checked">我同意注册条款和会员加入标准
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <a href="http://www.baidu.com">我是会员，立即登录</a>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <h4>我承诺</h4>
+                <ul>
+                    <li>年满18岁，单身</li>
+                    <li>抱着严肃的态度</li>
+                    <li>真诚寻找另一半</li>
+                </ul>
+            </td>
+        </tr>
+
+        <script>
+            var obj1 = {
+                a: 1,
+                b: function() {
+                    console.log(this);
+                }
+            }
+            var obj2 = {
+                a: 2,
+                b: () => {
+                    console.log(this)
+                }
+            }
+            let obj3 = {
+                a: 3,
+                b: () => {
+                    console.log(this)
+                }
+            }
+            obj1.b();
+            obj2.b();
+            obj3.b();
+        </script>
+</body>
+</html>
