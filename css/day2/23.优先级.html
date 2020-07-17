@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 0, 0, 0, 1 */
+    div {
+      color: red;
+    }
+    /* 0, 0, 1, 0 */
+    .one {
+      color: blue;
+    }
+    /* 0, 1, 0, 0 */
+    #two {
+      color: green;
+    }
+    /* style=行内样式  1, 0, 0, 0 */
+    div {
+      color: pink;
+    }
+
+    /* !important最大 */
+    div {
+      color: orange !important;
+    }
+    span {
+      color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="one" id="two" style="color: yellow">权重还有30秒到达战场</div>
+  <div>
+    <span>11111</span>
+  </div>
+</body>
+</html>

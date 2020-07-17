@@ -65,3 +65,59 @@ a:active
 顺序不能颠倒
 
 
+### 标签的三种显示模式
+块级元素
+独占一行，高度，宽度，外边距，内边距都可以红纸，宽度默认容器的100%
+h1~h6, p, div, ul, ol, li
+（p, h1~h3, dt里面不能放div）
+
+
+行内元素
+相邻元素显示在一行，宽高直接设置无效，默认宽度是本身内容的宽度，行内元素只能容纳文本或者其他行内元素
+
+a, strong, b, em, i, span, ins, u, del, s
+
+行内块元素
+img, input, td
+可以设置宽高
+
+### 标签显示模式转换
+display: block, inline-block, inline;
+
+### 行高line-height
+基线和基线之间的距离为行高
+
+单行文本垂直居中
+height: 50px;
+line-height: 50px;
+
+### css背景
+背景颜色
+background-color
+背景图片
+background-image
+背景平铺
+background-repeat
+背景位置
+background-position
+
+背景简写
+background: 背景颜色 背景图片 背景平铺 背景滚动 背景位置;
+背景透明
+background: rgba(0, 0, 0, 0.4)
+
+### CSS的三大特性
+css层叠性
+
+css继承性
+text-, font-, line-, color这些可以继承
+
+css优先级算法
+权重计算，权重叠加
+继承的权重是零
+
+## CSS盒子模型
+border: border-width, border-style, border-color
+
+内盒尺寸计算
+
