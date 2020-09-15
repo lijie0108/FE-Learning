@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+          /**
+          1.如何改变Promise的状态？
+            resolve(value): 如果当前是pending就会变为resolved
+            reject(reason): 如果当前是pending就会变为rejected
+            抛出异常: 如果当前是pending就会变为rejected
+          2.一个Promise指定多个成功/失败回调函数，都会调用？
+            当promise状态改变为对应状态时都会调用
+          */
+
+          const p = new Promise((resolve, reject) => {
+            // resolve(1); // promise变为成功状态
+            // reject(2);  // promise变为失败状态
+            // throw new Error('出错了'); // 抛出异常，promise变为rejected失败状态，
+            throw 3;
+          })
+          p.then(value=> {}, err=> console.log(err));
+    </script>
+  </body>
+</html>

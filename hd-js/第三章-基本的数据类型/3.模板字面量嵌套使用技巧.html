@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+    li {
+      padding: 10px;
+    }
+    li:nth-child(odd) {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // let start = "houdunren.com";
+    // start += " 后盾人";
+    // console.log(start);
+
+    // function show() {
+    //   return "houdunren.com";
+    // }
+
+    // let hd = `www ${show()}`;
+    // hd = `www ${5 + 9}`;
+    // console.log(hd);
+
+    let lessons = [
+      {title: 'Vue'},
+      {title: 'React'},
+      {title: 'Angular'}
+    ];
+
+    function templates() {
+      return `
+        <ul>${lessons.map(item => `<li>${item.title}</li>`).join('')}</ul>
+      `;
+    }
+
+    document.body.innerHTML = templates()
+  </script>
+</body>
+</html>

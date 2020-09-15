@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <script>
+    const kuaizi = ['王太利', '小样'];
+    const feng = ['赠一', '零花'];
+
+    const zuixuan = kuaizi.concat(feng);
+
+    const zuixuans = [...kuaizi, ...feng];
+    console.log(zuixuan, zuixuans)
+
+    // 数组的克隆
+    const sanzi = ['E', 'G', 'M'];
+    const sanye = [...sanzi];
+
+    console.log(sanye);
+
+    // 转化为数组
+    const divs = document.querySelectorAll('div');
+    const divArr = [...divs];
+    console.log(divs, divArr)
+  </script>
+</body>
+</html>

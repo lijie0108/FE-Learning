@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 手机
+    function Phone1(brand, price) {
+      this.brand = brand;
+      this.price = price;
+    }
+
+    Phone1.prototype.call = function() {
+      console.log('我可以打电话')
+    }
+    let Huawei = new Phone1('华为', 5999);
+    Huawei.call();
+    console.log(Huawei);
+
+    // class
+    class Phone2 {
+      // 构造方法
+      constructor(brand, price) {
+        this.brand = brand;
+        this.price = price;
+      }
+      call() {
+        console.log('我可以打电话')
+      }
+    }
+
+    let onePlus = new Phone2('一加', 1999);
+    onePlus.call();
+    console.log(onePlus);
+  </script>
+</body>
+</html>

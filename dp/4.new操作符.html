@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function createCat(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    var catA = new createCat('xiaoA', 18);
+    console.log(catA);
+
+    /*
+      new做了哪些操作？
+        1.创建一个空对象
+        2.将构造函数的prototype属性赋值给新对象的__proto__属性
+        3.将构造函数的执行上下文指向新对象
+        4.执行构造函数的代码
+        5.将新对象返回
+    */
+
+    var catB = (function(){
+      var obj = {};
+      obj.__proto__ = createCat.prototype;
+      createCat.call(obj, 'xioaB', 12);
+      return obj;
+    })()
+  </script>
+</body>
+</html>

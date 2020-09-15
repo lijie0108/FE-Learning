@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    建造者模式注重创建对象的细节，使用这种模式创建出的复杂对象或者复合对象解构会非常清晰
+    */
+
+      var data = [
+        {
+          name: 'zhang san',
+          age: 23,
+          work: 'engineer',
+        },
+        {
+          name: 'li si',
+          age: 18,
+          work: 'teacher',
+        },
+        {
+          name: 'wan wu',
+          age: 12,
+          work: 'xxx',
+        },
+      ];
+
+      function Candidata(param) {
+        var _candidate = {};
+        _candidate.name = param.name;
+        _candidate.age = param.age;
+        _candidate.firstName = _candidate.name.split(' ')[0];
+        _candidate.secondName = _candidate.name.split(' ')[1];
+        _candidate.work = {};
+        switch (param.work) {
+          case 'engineeer':
+            _candidate.work.name = '工程师';
+            _candidate.work.desc = '工程师爱编程';
+            break;
+          case 'teacher':
+            _candidate.work.name = '教师';
+            _candidate.work.desc = '教师爱分享';
+            break;
+          default:
+            _candidate.work.name = param.work;
+            _candidate.work.desc = '无';
+        }
+        _candidate.work.changeWork = function(work) {
+          this.name = work;
+        }
+        _candidate.work.changeDes = function(des) {
+          this.work = des
+        }
+
+        return _candidate;
+      }
+
+      var candidateArr = [];
+      for(var i = 0; i < data.length; i++) {
+        candidateArr[i] = Candidata(data[i]);
+      }
+      console.log(candidateArr);
+      candidateArr[0].work.changeWork('xxx');
+      console.log(candidateArr[0].work);
+    </script>
+  </body>
+</html>

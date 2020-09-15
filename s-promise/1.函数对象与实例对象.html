@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.区别实例对象与函数对象
+    // 实例对象：new函数产生的对象
+    // 函数对象：将函数作为对象使用时
+    function Fn() {
+
+    }
+    const fn = new Fn();
+    console.log(fn.prototype); // Fn是函数对象
+    Fn.bind({});
+    $('#test');
+    $.get('/test');
+  </script>
+</body>
+</html>

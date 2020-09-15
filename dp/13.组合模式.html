@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+     * 组合模式：作用于将多个部分通过组合变成一个整体。就如同我们去麦当劳点了一个汉堡、两个薯条
+     * 和一杯可乐。OK，我们可以把这些东西看成一个个部分或者说组件，通过组合就可以将整个套餐产出给顾客。
+     * 这个就是组合模式
+     */
+
+     window.onload = function() {
+       function inheritPrototype(subClass, superClass) {
+         function F() {};
+         F.prototype = superClass.prototype;
+         subClass.prototype = new F();
+         subClass.prototype.constructor = subClass;
+       }
+
+       function Container() {
+         this.children = [];
+         this.element = null;
+       }
+       Container.prototype = {
+         init: function() {
+           throw new Error('请重写init方法')
+         },
+         add: function(child) {
+           this.children.push(child)
+           this.element.appendChild(child.element);
+           return this;
+         }
+       }
+
+       // 基于容器基类创建的表单容器
+       function CreateForm(id, method, action, parent) {
+         Container.call(this);
+         this.id = id || '';
+         this.method = method || '';
+         this.action = action || '';
+         this.parent = parent;
+         this.init();
+       }
+       inheritPrototype(CreateForm, Container);
+
+       CreateForm.prototype.init = function() {
+         this.element = document.createElement('form');
+         this.element.id = this.id;
+         this.element.method = this.method;
+         this.element.action = this.action;
+       }
+       CreateForm.prototype.show = function() {
+         this.parent.appendChild(this.element);
+       }
+
+       
+     }
+  </script>
+
+
+  <form action="xxx" method="GET">
+    <div class="form-line">
+      <label for="user">用户名</label>
+      <input type="text" id="user" name="user">
+    </div>
+    <div class="form-line">
+      <label for="password">密码</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="form-line">
+      <input type="submit" value="登录">
+    </div>
+  </form>
+</body>
+</html>

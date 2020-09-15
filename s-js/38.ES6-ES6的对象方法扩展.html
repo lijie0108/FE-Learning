@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Object.is 判断两个值是否完全相等
+    console.log(Object.is(120, 121));
+    console.log(Object.is(NaN, NaN));
+    console.log(Object.is({}, {}));
+    // Object.assign 对象的合并
+    const config1 = {
+      host: 'localhost',
+      port: 3306,
+      name: 'root',
+      password: 'root',
+      test: []
+    }
+
+    const config2 = {
+      host: 'http://atguitu.com',
+      port: 33060,
+      name: 'admin',
+      password: '1234'
+    }
+
+    const config = Object.assign(config1, config2);
+    config.test.push('1');
+
+    // Object.setPrototypeOf  Object.getPrototypeOf
+    const school = {
+      name: 'sgg'
+    }
+    const city = {
+      site: ['上海', '深圳', '北京']
+    }
+
+    Object.setPrototypeOf(school, city)
+    Object.getPrototypeOf(school);
+  </script>
+</body>
+</html>

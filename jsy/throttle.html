@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      color: #fff;
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container"></div>
+
+  <script>
+    var con = document.getElementById('container');
+    var count = 0;
+    function getUserAction() {
+      count++;
+      con.innerHTML = count;
+    }
+
+    function throttle(func, wait) {
+      var previous = 0;
+      var context, args;
+      return function() {
+        context = this;
+        args = arguments;
+        var date = +new Date();
+        if(date - previous > wait) {
+          func.apply(context, args);
+          previous = date;
+        }
+      }
+    }
+    con.onmousemove = throttle(getUserAction, 500);
+  </script>
+</body>
+</html>

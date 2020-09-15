@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="password" id="pass">
+  <span></span>
+  <script>
+    // let name = "houdunren.com";
+    // console.log(name.length);
+    // console.log(name.toUpperCase());
+    // console.log(name.toLowerCase());
+
+    // let site = "  hdcms  ";
+    // console.log(site.length);
+    // console.log(site.trim().length);
+
+    // document.querySelector('#pass').addEventListener('keyup', function(){
+    //   this.value = this.value.trim();
+    //   if(this.value.length < 5) {
+    //     let span = document.querySelector('span');
+    //     span.innerHTML = '密码不能小于5位'
+    //   }
+    //   console.log(this.value.length);
+    // })
+
+    let hd = "houdunren";
+    // console.log(hd.charAt(0));
+    // console.log(hd[0]);
+    for(let i = 0; i < hd.length; i++) {
+      let span = document.createElement('span');
+      span.style.fontSize = (i+1)* 10 + "px";
+      span.innerHTML = hd[i];
+      document.body.append(span);
+    }
+  </script>
+</body>
+</html>

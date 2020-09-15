@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const hd = "houdunren.com";
+    console.log(hd.indexOf("o", 11));
+
+    if(hd.indexOf("o") !== -1) {
+      console.log('找到了')
+    }
+
+    console.log(hd.includes("h"));
+    console.log(hd.includes("o", 11));
+    console.log(hd.lastIndexOf("o"));
+    console.log(hd.lastIndexOf("o", 9));
+
+    console.log(hd.startsWith("h"));
+    console.log(hd.startsWith("H"));
+    console.log(hd.toLocaleLowerCase().startsWith("h"));
+    console.log(hd.endsWith("m"));
+
+    const word = ['php', 'css'];
+    const str = '我喜欢在后盾人学习php和css';
+    word.some(word => {
+      return str.includes(word);
+    })
+  </script>
+</body>
+</html>

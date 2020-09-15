@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var catA = {
+      name: 'xiaoA',
+      eat: function() {
+        console.log('xiaoA eat something')
+      }
+    }
+    var catB = {
+      name: 'xiaoB',
+      eat: function() {
+        console.log('xiaoB eat something')
+      }
+    }
+    var catC = {
+      name: 'xiaoC',
+      eat: function() {
+        console.log('xiaoC eat something')
+      }
+    }
+
+    // 封装
+    // 使用工厂模式
+    // function createCat(name) {
+    //   var object = {};
+    //   object.name = name;
+    //   object.eat = function() {
+    //     console.log(name + 'eat something')
+    //   }
+    //   return object;
+    // }
+
+    // var catA = createCat('catA');
+    // var catB = createCat('catB');
+    // var catC = createCat('catC');
+
+    // 面向对象的方式进行封装
+    function createCat(name) {
+      this.name = name;
+      this.eat = function() {
+        console.log(this.name + 'eat something');
+      }
+    }
+
+    var catA = new createCat('catA');
+    var catB = new createCat('catB');
+    var catC = new createCat('catC');
+
+
+  </script>
+</body>
+</html>

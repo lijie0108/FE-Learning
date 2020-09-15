@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 常规：先指定回调函数，后改变状态
+    new Promise((resolve, reject) => {
+      setTimeout(()=> {
+        resolve(1)
+      }, 1000)
+    }).then(value=> {
+      console.log(value);
+    })
+  </script>
+</body>
+</html>

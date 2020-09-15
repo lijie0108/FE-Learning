@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 声明Set
+    let s = new Set();
+    
+    console.log(typeof s);
+    let s2 = new Set(['大事', '小时', '耗时', '小时']);
+    console.log(s2.size);
+
+    s2.add('稀释');
+    s2.delete('稀释');
+
+    s2.has('小时');
+    // s2.clear();
+    for(let v of s2) {
+      console.log(v);
+    }
+  </script>
+</body>
+</html>

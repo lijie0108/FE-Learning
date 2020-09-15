@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // call apply用来动态改变this指向
+    function aaa(name, age) {
+      this.name = name;
+      this.age = age;
+      // console.log(this);
+    }
+
+    var objA = {
+      b: aaa
+    }
+
+    // aaa();
+    // objA.b();
+
+    // aaa.call(objA);
+
+    // aaa.apply(objA);
+
+    aaa.call(objA, 'xiaoA', 22);
+    console.log(objA)
+    objA.b.apply(window, ['xioaB', 22])
+    console.log(window)
+  </script>
+</body>
+</html>

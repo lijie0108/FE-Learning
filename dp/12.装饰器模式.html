@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+     * 装饰器模式：希望在不改变原对象的基础上，通过对其扩展功能和属性来实现更复杂的逻辑
+     */
+
+    //  function Car() {
+    //    this.price = 10;
+    //  }
+    //  Car.prototype = {
+    //    addHeatSeat() {
+    //      this.hasHeaSeat = true;
+    //      this.price += 2;
+    //    },
+    //    addAutoMirror() {
+    //      this.hasAutoMirror = true;
+    //      this.price += 0.8
+    //    }
+    //  }
+
+    //  var car1 = new Car();
+    //  console.log(this.price);
+    //  car1.addHeatSeat();
+    //  car1.addAutoMirror();
+    //  console.log(car1);
+
+    function Car() {
+      this.price = 10;
+    }
+    function carWithHeatSeat(carClass) {
+      carClass.hasHeatSeat = true;
+      carClass.price += 2;
+    }
+
+    function carWithAutoMirror(carClass) {
+      carClass.hasAutoMirror = true;
+      carClass.price += 0.8;
+    }
+
+    var car2 = new Car();
+    carWithHeatSeat(car2);
+    carWithAutoMirror(car2);
+    console.log(car2);
+  </script>
+</body>
+</html>

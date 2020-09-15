@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let m = new Map();
+    m.set('name', '杰');
+    m.set('change', function() {console.log('加油')});
+    let key = {
+      school: 'ATGU'
+    }
+    m.set(key, ['北京', '上海']);
+    console.log(m.size);
+    m.delete('name');
+    m.get('name');
+
+    m.get(key);
+
+    m.clear();
+    for(let v of m) {
+      console.log(v);
+    }
+    // map是升级版的对象，对象的key只能是字符串，map的key可以是对象，什么都行
+  </script>
+</body>
+</html>

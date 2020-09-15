@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    var p1 = new Person('s', 12);
+
+    function createFactory(context) {
+      var obj = new Object();
+      var args = [].slice.call(arguments, 1);
+      obj.__proto__ = context.prototype;
+      context.apply(obj, args);
+      return obj
+    }
+
+    var p2 = createFactory(Person, 's', 12)
+  </script>
+</body>
+</html>

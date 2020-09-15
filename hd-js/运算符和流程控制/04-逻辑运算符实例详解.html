@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="password">
+  <input type="text" name="confirm_password">
+  <script>
+    // let a = 1, b = 1;
+    // if(a == 1 && b == 1) {
+    //   console.log('都为1');
+    // }
+    // if(a == 1 || b == 2) {
+    //   console.log('有一个为1就行')
+    // }
+    // if(a == 1 && b !== 2) {
+    //   console.log('表达式成立')
+    // }
+
+    let inputs = document.querySelectorAll("[name='password'],[name='confirm_password']");
+    console.log(inputs)
+
+    function query(name) {
+      return document.querySelector(`[name=${name}]`)
+    }
+  </script>
+</body>
+</html>

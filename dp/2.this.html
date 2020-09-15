@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // this
+    // 在函数执行的时候会在函数内部创建两个变量，arguments，this
+    // arguments存储着实参的一个类数组对象
+    // this指向函数的执行上下文
+    // 谁调用这个函数this就指向谁
+    
+
+    function aa(a, b) {
+      console.log(arguments);
+    }
+    aa(1, 2, 3, 4);
+
+    function bb() {
+      console.log(this);
+    }
+
+    var objA = {
+      b: bb,
+      c: {
+        d: bb
+      }
+    }
+
+    bb(); // window
+    objA.b();  // objA
+    objA.c.d();  // objA.c
+  </script>
+</body>
+</html>

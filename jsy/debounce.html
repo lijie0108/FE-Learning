@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        color: #fff;
+        background-color: #444;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="btn">点击取消</div>
+    <script>
+      var count = 1;
+      var container = document.getElementById('container');
+      function getUserAction() {
+        console.log(this);
+        container.innerHTML = count++;
+      }
+
+      function debounce(func, wait, immediate) {
+        var timeout, result;
+        var debounce = function() {
+          var context = this;
+          var args = arguments;
+          if(timeout) {
+              clearTimeout(timeout);
+            }
+            if(immediate) {
+              var callNow = !timeout;
+              timeout = setTimeout(function() {
+                timeout = null;
+              }, wait);
+              if(callNow) result = func.apply(context, args);
+            }else {
+              timeout = setTimeout(function() {
+                func.apply(context, args);
+              })
+            }
+            return result;
+        }
+        debounce.cancel = function() {
+          clearTimeout(timeout);
+          timeout = null;
+        }
+        return debounce;
+      }
+
+      var setUserAction = debounce(getUserAction, 1000, true);
+      document.getElementById('btn').onclick = function() {
+        setUserAction.cancel();
+      }
+      container.onmousemove = setUserAction;
+    </script>
+  </body>
+</html>

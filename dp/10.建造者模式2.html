@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     var data = [
+        {
+          name: 'zhang san',
+          age: 23,
+          work: 'engineer',
+        },
+        {
+          name: 'li si',
+          age: 18,
+          work: 'teacher',
+        },
+        {
+          name: 'wan wu',
+          age: 12,
+          work: 'xxx',
+        },
+      ];
+
+      function Candidate(param) {
+        var _candidate = new Person(param);
+        _candidate.name = new CreateName(param.name);
+        _candidate.work = new CreateWork(param.work);
+        return _candidate;
+      }
+
+      function Person(param) {
+        this.age = param.age;
+      }
+
+      function CreateName(name) {
+        this.wholeName = name;
+        this.firstName = name.split(' ')[0];
+      }
+
+      function CreateWork(work) {
+        switch (work) {
+          case 'engineeer':
+            this.name = '工程师';
+            this.desc = '工程师爱编程';
+            break;
+          case 'teacher':
+            this.name = '教师';
+            this.desc = '教师爱分享';
+            break;
+          default:
+            this.name = work;
+            this.desc = '无';
+        }
+      }
+
+      CreateWork.prototype.changeWork = function(work) {
+        this.name = work;
+      }
+      CreateWork.prototype.changeDes = function(des) {
+        this.desc = des;
+      }
+
+      var candidateArr = [];
+      for(var i = 0; i < data.length; i++) {
+        candidateArr[i] = Candidate(data[i]);
+      }
+      console.log(candidateArr);
+      candidateArr[0].work.changeWork('xxx');
+      console.log(candidateArr[0])
+  </script>
+</body>
+</html>

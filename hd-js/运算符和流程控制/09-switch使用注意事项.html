@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let name = '视频';
+    switch(name) {
+      case '产品':
+        console.log(1);
+        break;
+      case '视频':
+        console.log(2);
+        break;
+      default:
+        break;
+    }
+
+    function message(age) {
+      let msg = '';
+      switch(true) {
+        case age > 60:
+          msg = '老年';
+          break;
+        case age > 40:
+          msg = '中年';
+          break;
+        case age > 20:
+          msg = '青年';
+          break;
+      }
+      console.log(msg);
+    }
+    message(80)
+  </script>
+</body>
+</html>
