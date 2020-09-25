@@ -29,11 +29,42 @@
 // }
 
 
-let nums: number[] = [100, 200, 300];
+// let nums: number[] = [100, 200, 300];
 
-let sum: number = 0;
-for(let i: number = 0, len: number = nums.length; i < len; i++) {
-  sum += nums[i];
-}
+// let sum: number = 0;
+// for(let i: number = 0, len: number = nums.length; i < len; i++) {
+//   sum += nums[i];
+// }
 
-console.log(sum)
+// console.log(sum)
+
+// let nums: number[] = [200, 30, 3];
+// let sum: number = 0;
+// for(let i: number = 0, len = nums.length; i < len; i++) {
+//   sum += nums[i]
+// }
+// console.log(sum)
+
+// let nums: number[] = [1, 9, 3];
+
+// let max: number = 0;
+
+// for(let i: number = 0, len= nums.length; i < len; i++) {
+//   if(nums[i] > max) {
+//     max = nums[i]
+//   }
+// }
+
+// console.log(max);
+
+// let nums: number[] = [1, 3, 0, 10, 33, 0, 0, 6];
+
+// let num: number[] = [];
+
+// for(let i: number = 0, len = nums.length; i < len; i++) {
+//   if(nums[i] !== 0) {
+//     num.push(nums[i])
+//   }
+// }
+
+// console.log(num)

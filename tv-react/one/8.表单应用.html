@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./node_modules/react/umd/react.development.js"></script>
+  <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+
+    class TodoList extends React.Component {
+      state = {
+        val: '',
+          list: [1]
+      }
+      handleInput = (e) => {
+        this.setState({
+          val: e.target.value
+        })
+      }
+      handleAdd = () => {
+        const {val, list} = this.state;
+        list.push(val);
+        this.setState({
+          list,
+          val: ''
+        })
+      }
+      render() {
+        const val = this.state.val;
+        const arr = this.state.list;
+        const listItem = [];
+        arr.map((item, index) => {
+          let li = <li key={index}>{item}</li>
+          listItem.push(li);
+        })
+
+        return <div>
+          <input type="text" value={val} onChange={this.handleInput} />
+          <button onClick={this.handleAdd}>添加</button>
+          <ul>
+          {listItem}
+        </ul>
+          </div>
+      }
+    }
+    ReactDOM.render(<TodoList />, document.getElementById('app'))
+  </script>
+</body>
+</html>
